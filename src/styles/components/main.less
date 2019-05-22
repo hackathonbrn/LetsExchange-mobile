@@ -1,0 +1,85 @@
+.main {
+	background : #00114F;
+	overflow   : hidden;
+
+	&__card-table {
+		padding        : 8px;
+		overflow       : scroll;
+		max-height     : 550px;
+		padding-bottom : 40px;
+
+		&_find {
+			display   : flex;
+			flex-wrap : wrap;
+
+			.card__inner {
+				justify-content : center;
+			}
+		}
+	}
+
+	&__add-card-table {
+		height : 500px;
+	}
+
+	&__add-card-table-wrap {
+		padding  : 10px;
+		height   : 100%;
+		overflow : scroll;
+
+		hr {
+			opacity : 0.3;
+		}
+	}
+
+	&__inner-heading {
+		font-size   : 17px;
+		line-height : 22px;
+		color       : #FFFFFF;
+	}
+
+	&__textarea {
+		background    : #002267;
+		border-radius : 10px;
+		width         : 100%;
+		color         : #fff;
+		padding       : 10px;
+		border        : none;
+
+		&::placeholder {
+			font-family : @font;
+			font-size   : 16px;
+			line-height : 18px;
+			color       : #FFFFFF;
+			opacity     : 0.5;
+		}
+	}
+
+	&__card-placeholder {
+		border      : 1px solid #FFFFFF;
+		.size(124px, 154px);
+		position    : relative;
+		display     : flex;
+		align-items : flex-end;
+		padding     : 15px;
+
+		span {
+			font-size   : 13px;
+			line-height : 16px;
+			text-align  : center;
+			color       : #FFFFFF;
+		}
+
+		&:before {
+			.pseudo();
+			background      : url("../../img/add.svg") no-repeat;
+			background-size : contain;
+			position        : absolute;
+			.size(24px);
+			left            : calc(50% - 12px);
+			top             : calc(50% - 12px);
+		}
+	}
+
+
+}

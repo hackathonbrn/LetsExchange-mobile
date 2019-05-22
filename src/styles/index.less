@@ -1,0 +1,131 @@
+@import url('vendor/iziModal.min.less');
+@import url("normalize.less");
+@import url("vendor/slick.less");
+@import url("vendor/select2.less");
+@import url("vendor/select2-theme.less");
+@import url("mixins.less");
+//@import url("ui.less");
+@import url('../fonts/fonts.less');
+@import url('components/screen.less');
+@import url('components/welcome.less');
+@import url('components/button.less');
+@import url('components/header.less');
+@import url('components/main.less');
+@import url('components/card.less');
+
+
+/* * * * * * * * * * *
+*                    *
+* Variables          *
+*                    *
+* * * * * * * * * * */
+
+@font : 'SF UI Text';
+@font2 : 'SF Pro Display';
+
+@mobile : ~"(max-width: 1199px)";
+@desktop : ~"(min-width: 1200px)";
+
+//colors
+
+@black : #777;
+
+/* * * * * * * * * * *
+*                    *
+* Global             *
+* Styles             *
+*                    *
+* * * * * * * * * * */
+html,
+body {
+	width      : 100%;
+	min-height : 100%;
+}
+
+.page {
+	position                   : relative;
+	z-index                    : 1;
+	font-family                : @font, sans-serif;
+	-webkit-font-smoothing     : antialiased;
+	text-rendering             : optimizeLegibility;
+	-moz-osx-font-smoothing    : grayscale;
+	-moz-font-feature-settings : 'liga', 'kern';
+	color                      : #fff;
+	width                      : 100vw;
+	height                     : 100vh;
+	font-size                  : 18px;
+	line-height                : 28px;
+	background                 : #00114F;
+
+	//overflow-x                 : hidden;
+
+	* {
+		box-sizing : border-box;
+
+		&:focus {
+			outline-color : #B4E4FF;
+		}
+	}
+
+	&__wrapper {
+		padding : 0;
+	}
+}
+
+.centred {
+	text-align : center;
+}
+
+@media (min-width : 1200px) {
+	.mobile-show {
+		display : none;
+	}
+}
+
+.container {
+	max-width : 100%;
+	width     : 1183px;
+	margin    : 0 auto;
+
+	@media @mobile {
+		padding : 0 20px;
+		width   : 100%;
+	}
+}
+
+.mobile-hide {
+	@media @mobile {
+		display : none;
+	}
+}
+
+
+/* * * * * * * * * * *
+ * 									 *
+ * Pages             *
+ * Styles            *
+ *                   *
+ * * * * * * * * * * */
+
+/* * * * * * * * * * *
+* 									 *
+* Block              *
+* Styles             *
+*                    *
+* * * * * * * * * * */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance : none;
+	margin             : 0;
+}
+
+
+/* * * * * * * * * * *
+* 									 *
+* Media              *
+* Queries            *
+*                    *
+* * * * * * * * * * */
+
+//@import url("adaptive.less");

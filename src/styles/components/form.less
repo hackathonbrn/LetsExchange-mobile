@@ -1,0 +1,53 @@
+.form {
+  display        : flex;
+  flex-direction : column;
+
+  &__input {
+    border        : none;
+    border-bottom : 1px solid #E4E4E4;
+    position      : relative;
+    z-index       : 1;
+    font-size     : 14px;
+    padding       : 8px;
+    color         : #262525;
+    .size(100%);
+
+
+    &:focus,
+    &:not(:invalid) {
+      outline : none;
+
+      & ~ .form__label {
+        color     : #8EBA5B;
+        font-size : 12px;
+        top       : -18px;
+      }
+    }
+  }
+
+  &__input-wrap {
+    position   : relative;
+    margin-top : 28px;
+    height     : 34px;
+  }
+
+  &__label {
+    position   : absolute;
+    left       : 8px;
+    top        : 3px;
+    z-index    : 2;
+    font-size  : 14px;
+    color      : #777;
+    transition : all .15s ease-in-out;
+  }
+
+  &__title {
+    font-weight : bold;
+    font-size   : 16px;
+    color       : #262525;
+    padding     : 0;
+    margin      : 0;
+    max-width   : 220px;
+    line-height : normal;
+  }
+}

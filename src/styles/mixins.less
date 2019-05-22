@@ -1,0 +1,16 @@
+.flex(@direction: row, @justify: flex-start, @align: stretch) {
+  display         : flex;
+  flex-direction  : @direction;
+  justify-content : @justify;
+  align-items     : @align;
+}
+
+.size(@w, @h:@w) {
+  height : @h;
+  width  : @w;
+}
+
+.pseudo {
+  position : absolute;
+  content  : "";
+}
